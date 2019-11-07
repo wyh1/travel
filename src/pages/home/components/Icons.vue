@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key='index'>
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -16,51 +16,20 @@
 <script>
 export default {
   name: 'Icons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '景点门票'
-      }, {
-        id: '0002',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/e98eea7ed037b04a5af0250ca8a1abd7.png',
-        desc: '少林寺'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-        desc: '郑州绿博园'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-        desc: '郑州方特'
-      }, {
-        id: '0005',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/e98eea7ed037b04a5af0250ca8a1abd7.png',
-        desc: '少林寺'
-      }, {
-        id: '0006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-        desc: '郑州绿博园'
-      }, {
-        id: '0007',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-        desc: '郑州方特'
-      }, {
-        id: '0008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png',
-        desc: '郑州园博园'
-      }, {
-        id: '0009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png',
-        desc: '郑州园博园'
-      }]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
