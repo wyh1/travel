@@ -36,16 +36,16 @@ export default {
         desc: '郑州方特'
       }, {
         id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png',
-        desc: '郑州园博园'
+        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/e98eea7ed037b04a5af0250ca8a1abd7.png',
+        desc: '少林寺'
       }, {
         id: '0006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png',
-        desc: '郑州园博园'
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
+        desc: '郑州绿博园'
       }, {
         id: '0007',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png',
-        desc: '郑州园博园'
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
+        desc: '郑州方特'
       }, {
         id: '0008',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png',
