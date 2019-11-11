@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐!</div>
     <ul>
-      <li class="border-bottom" v-for="item of list" :key='item.id'>
+      <router-link tag="li" class="border-bottom" v-for="item of list" :key='item.id' :to="'./detail/' + item.id">
         <div class="item">
           <div class="item-img-wrapper">
             <img class="item-img" :src='item.imgUrl'>
@@ -13,7 +13,7 @@
             <button class="item-button">查看详情</button>
           </div>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -23,26 +23,6 @@ export default {
   name: 'Recommend',
   props: {
     list: Array
-  },
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/13/448509f1ff8d30796f6c8fc574dcc0e5.jpg_200x200_cd0c23e3.jpg',
-        title: '中原福塔',
-        desc: '郑州管城区，五星'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/13/448509f1ff8d30796f6c8fc574dcc0e5.jpg_200x200_cd0c23e3.jpg',
-        title: '中原福塔',
-        desc: '郑州管城区，五星'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/13/448509f1ff8d30796f6c8fc574dcc0e5.jpg_200x200_cd0c23e3.jpg',
-        title: '中原福塔',
-        desc: '郑州管城区，五星'
-      }]
-    }
   }
 }
 </script>
