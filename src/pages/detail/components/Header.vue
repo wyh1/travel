@@ -48,6 +48,7 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header-fiexd
+    z-index 2
     position fixed
     top 0
     left 0
